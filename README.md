@@ -46,3 +46,5 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 3. CLOSE VSCODE AND RESTART!
 
 ### Task: Hook-up nav component
+
+### Task: Add tables.component, table.module and table-routing.module
