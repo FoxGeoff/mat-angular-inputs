@@ -44,3 +44,5 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 1. Run `ng add @angular/material`
 2. Run `npm i -s @angular/flex-layout @angular/cdk`
 3. CLOSE VSCODE AND RESTART!
+
+### Task: Hook-up nav component
