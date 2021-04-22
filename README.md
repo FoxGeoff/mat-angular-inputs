@@ -35,6 +35,6 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
  */
 ```
 
-### Task: Add ui component
+### Task: Add ui.component
 
-### Task: Add Core Module
+### Task: Add core.module, shared.module and material.module
