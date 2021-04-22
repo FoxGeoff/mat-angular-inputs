@@ -34,3 +34,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
  * AutoCompleteComponent
  */
 ```
+
+### Task: Add ui component
+
+### Task: Add Core Module

@@ -1,0 +1,117 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport="true"
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="!(isHandset$ | async)"
+  >
+    <mat-toolbar color="primary">Menu</mat-toolbar>
+    <mat-nav-list>
+      <h3 matSubheader>Contacts</h3>
+      <a mat-list-item routerLink="/accounts"
+        ><mat-icon matListIcon>folder</mat-icon>Accounts</a
+      >
+      <a mat-list-item routerLink="/accounts"
+        ><mat-icon matListIcon>folder</mat-icon>Contact Groups</a
+      >
+      <mat-divider></mat-divider>
+
+      <h3 matSubheader>QuickQuote</h3>
+      <a mat-list-item routerLink="/accounts"
+        ><mat-icon matListIcon>folder</mat-icon>Price Calculator</a
+      >
+      <a mat-list-item routerLink="/accounts"
+        ><mat-icon matListIcon>folder</mat-icon>New Quote</a
+      >
+      <a mat-list-item routerLink="/accounts"
+        ><mat-icon matListIcon>folder</mat-icon>Quotes</a
+      >
+      <a mat-list-item routerLink="/accounts"
+        ><mat-icon matListIcon>folder</mat-icon>Quote Template</a
+      >
+      <mat-divider></mat-divider>
+
+      <h3 matSubheader>Production</h3>
+      <a mat-list-item routerLink="/accounts"
+        ><mat-icon matListIcon>folder</mat-icon>Orders</a
+      ><a mat-list-item routerLink="/accounts"
+        ><mat-icon matListIcon>folder</mat-icon>Jobs Board</a
+      ><a mat-list-item routerLink="/accounts"
+        ><mat-icon matListIcon>folder</mat-icon>Invoices</a
+      >
+      <mat-divider></mat-divider>
+
+      <h3 matSubheader>Resources</h3>
+      <a mat-list-item routerLink="/accounts"
+        ><mat-icon matListIcon>folder</mat-icon>Products</a
+      >
+      <a mat-list-item routerLink="/accounts"
+        ><mat-icon matListIcon>folder</mat-icon>Finishing Options
+      </a>
+      <a mat-list-item routerLink="/accounts"
+        ><mat-icon matListIcon>folder</mat-icon>Services</a
+      >
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async"
+      >
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span><mat-icon>flight_takeoff</mat-icon><small>WingMan</small></span>
+      <span class="spacer"></span>
+
+      <button mat-button [matMenuTriggerFor]="contactsMenu">Contacts</button>
+      <!-- #docregion menu-position -->
+      <mat-menu #contactsMenu="matMenu">
+        <!-- #enddocregion menu-position -->
+        <button mat-menu-item><a routerLink="/accounts">Accounts</a></button>
+        <button mat-menu-item>
+          <a routerLink="/contact-groups">Contact Groups</a>
+        </button>
+      </mat-menu>
+
+      <button mat-button [matMenuTriggerFor]="QuickQuoteMenu">
+        QuickQuote
+      </button>
+      <mat-menu #QuickQuoteMenu="matMenu">
+        <button mat-menu-item>
+          <a routerLink="/accounts">Price Calculator</a>
+        </button>
+        <button mat-menu-item><a routerLink="/accounts">New Quote</a></button>
+        <button mat-menu-item><a routerLink="/accounts">Quotes</a></button>
+        <button mat-menu-item>
+          <a routerLink="/accounts">Quote Template</a>
+        </button>
+      </mat-menu>
+
+      <button mat-button [matMenuTriggerFor]="productionMenu">
+        Production
+      </button>
+      <mat-menu #productionMenu="matMenu">
+        <button mat-menu-item><a routerLink="/accounts">Orders</a></button>
+        <button mat-menu-item><a routerLink="/accounts">Jobs Board</a></button>
+        <button mat-menu-item><a routerLink="/accounts">Invoices</a></button>
+      </mat-menu>
+
+      <button mat-button [matMenuTriggerFor]="resourcesMenu">Resources</button>
+      <mat-menu #resourcesMenu="matMenu">
+        <button mat-menu-item><a routerLink="/accounts">Products</a></button>
+        <button mat-menu-item>
+          <a routerLink="/accounts">Finishing Options</a>
+        </button>
+        <button mat-menu-item><a routerLink="/accounts">Services</a></button>
+      </mat-menu>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
