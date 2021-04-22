@@ -38,3 +38,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ### Task: Add ui.component
 
 ### Task: Add core.module, shared.module and material.module
+
+### Task: Add Angular Material and Flex Layout
+
+1. Run `ng add @angular/material`
+2. Run `npm i -s @angular/flex-layout @angular/cdk`
+3. CLOSE VSCODE AND RESTART!
