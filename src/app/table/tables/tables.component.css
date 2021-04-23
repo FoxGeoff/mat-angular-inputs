@@ -1,4 +1,14 @@
-table {
-  width: 30%;
-  margin: 20px;
+.container {
+  display: flex;
+  flex-direction: row; /* default */
+  justify-content: space-around;
 }
+
+.item {
+  flex: none;
+  width: 200px;
+}
+
+table {
+   width: 30;
+ }
