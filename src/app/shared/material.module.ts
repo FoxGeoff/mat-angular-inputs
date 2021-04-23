@@ -20,7 +20,7 @@ import { MatSortModule } from '@angular/material/sort';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatRadioModule } from '@angular/material/radio';
 
-import {MatMenuModule} from '@angular/material/menu';
+import { MatMenuModule } from '@angular/material/menu';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatExpansionModule } from '@angular/material/expansion';
 @NgModule({
@@ -49,6 +49,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
     MatMenuModule,
     MatTooltipModule,
     MatExpansionModule
-  ]
+  ],
+  /* https://stackoverflow.com/questions/53185437/angular7-cant-bind-to-datasource-since-it-isnt-a-known-property-of-mat-ta?noredirect=1&lq=1 */
+  imports: [MatTableModule]
 })
 export class MaterialModule { }
