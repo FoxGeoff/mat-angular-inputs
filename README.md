@@ -6,6 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 1. Ref. article: <https://dev.to/cliffeby/understanding-angular-material-table-inputs-1lp>
 2. Ref code: <https://stackblitz.com/edit/angular-trsxts>
+3. Ref for flex layout examples: <https://css-tricks.com/snippets/css/a-guide-to-flexbox/>
 
 ## Kanban Task: setup of project
 
