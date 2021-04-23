@@ -50,3 +50,5 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ### Task: Add tables.component, table.module and table-routing.module
 
 ### Task: Add Basic Table
+
+### Task: Add data.service

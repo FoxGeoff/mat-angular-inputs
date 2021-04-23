@@ -30,7 +30,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 export class TablesComponent implements OnInit {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = ELEMENT_DATA;
+  dataSource1 = ELEMENT_DATA;
 
   constructor() { }
 
