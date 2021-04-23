@@ -48,3 +48,5 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ### Task: Hook-up nav component
 
 ### Task: Add tables.component, table.module and table-routing.module
+
+### Task: Add Basic Table
