@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatTableDataSource } from '@angular/material/table';
+import { DataService, PeriodicElementModel } from 'src/app/table/data.service';
 
 export interface PeriodicElement {
   name: string;
@@ -30,11 +32,16 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 export class TablesComponent implements OnInit {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource1 = ELEMENT_DATA;
+  dataSource1: PeriodicElement[] ;
+  dataSource2: MatTableDataSource<PeriodicElementModel>[] = [];
 
-  constructor() { }
+  constructor(private dataService: DataService) {
+    this.dataSource1 = ELEMENT_DATA
+    this.dataService.getElements( 2000);
+   }
 
   ngOnInit(): void {
+
   }
 
 }
